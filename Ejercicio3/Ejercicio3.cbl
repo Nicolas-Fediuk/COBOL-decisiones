@@ -8,19 +8,19 @@
        DATA DIVISION.
        FILE SECTION.
        WORKING-STORAGE SECTION.
-       01  num pic s9(2).
-       01  entero pic s9(2).
-       01  resto pic s9(2).
+       01  NUM pic s9(2).
+       01  ENTERO pic s9(2).
+       01  RESTO pic s9(2).
 
        PROCEDURE DIVISION.
        MAIN-PROCEDURE.
 
            DISPLAY "Ingrese el numero".
-           ACCEPT num.
+           ACCEPT NUM.
 
-            DIVIDE num by 2 GIVING entero REMAINDER resto.
+            DIVIDE NUM by 2 GIVING ENTERO REMAINDER RESTO.
 
-            if resto = 0
+            if RESTO = 0
                 DISPLAY "El numero ingresado es par"
                 ELSE
                     DISPLAY "El numero ingresado es impar"

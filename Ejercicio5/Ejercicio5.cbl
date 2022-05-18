@@ -13,10 +13,9 @@
        FILE SECTION.
        WORKING-STORAGE SECTION.
 
-       01  importe pic 9(5)v9(2).
-       01  porcentaje pic 9(7)v9(2).
-       01  descuento pic 9(7)v9(2).
-       01  total pic 9(5)v9(2).
+       01  IMPORTE pic 9(5)v9(2).
+       01  DESCUENTO PIC 9(4)V9(2).
+       01  TOTAL pic 9(5)v9(2).
 
        PROCEDURE DIVISION.
        MAIN-PROCEDURE.
@@ -24,21 +23,18 @@
             ACCEPT importe.
 
             if importe < 100
-                MULTIPLY importe by 5 GIVING porcentaje
-                DIVIDE porcentaje by 100 GIVING descuento
-                SUBTRACT importe from descuento GIVING total
-                DISPLAY "Total: "total
+                COMPUTE DESCUENTO = (IMPORTE * 5) / 100
+                COMPUTE TOTAL = IMPORTE - DESCUENTO
+                DISPLAY "Total: "TOTAL
                 ELSE
                    if importe >= 100 and importe <= 500
-                    MULTIPLY importe by 10 GIVING porcentaje
-                    DIVIDE porcentaje by 100 GIVING descuento
-                    SUBTRACT importe from descuento GIVING total
-                    DISPLAY "Total: "total
+                    COMPUTE DESCUENTO = (IMPORTE * 10) / 100
+                    COMPUTE TOTAL = IMPORTE - DESCUENTO
+                    DISPLAY "Total: "TOTAL
                     ELSE
-                       MULTIPLY importe by 15 GIVING porcentaje
-                        DIVIDE porcentaje by 100 GIVING descuento
-                        SUBTRACT importe from descuento GIVING total
-                        DISPLAY "Total: "total
+                        COMPUTE DESCUENTO = (IMPORTE * 15) / 100
+                        COMPUTE TOTAL = IMPORTE - DESCUENTO
+                        DISPLAY "Total: "TOTAL
                     end-if
             end-if.
 

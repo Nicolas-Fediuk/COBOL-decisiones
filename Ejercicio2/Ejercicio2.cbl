@@ -8,22 +8,22 @@
        DATA DIVISION.
        FILE SECTION.
        WORKING-STORAGE SECTION.
-       01  num1 pic s9(3).
-       01  num2 pic s9(3).
-       01  entero pic s9(3).
-       01  resto pic s9(3).
+       01  NUM1 pic s9(3).
+       01  NUM2 pic s9(3).
+       01  ENTERO pic s9(3).
+       01  RESTO pic s9(3).
 
        PROCEDURE DIVISION.
        MAIN-PROCEDURE.
 
             DISPLAY "Ingerse el primer numero:".
-            ACCEPT num1.
+            ACCEPT NUM1.
             DISPLAY "Ingerse el segundo numero:".
-            ACCEPT num2.
+            ACCEPT NUM2.
 
-            DIVIDE num1 by num2 GIVING entero REMAINDER resto.
+            COMPUTE RESTO = NUM1 / NUM2.
 
-            if resto = 0
+            if RESTO = 0
                 DISPLAY "el primer numero es multiplo del segundo"
                 ELSE
                    DISPLAY "el primer numero no es multiplo del segundo"

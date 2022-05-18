@@ -7,18 +7,18 @@
        DATA DIVISION.
        FILE SECTION.
        WORKING-STORAGE SECTION.
-       01  num pic S9(2).
+       01  NUM pic S9(2).
 
        PROCEDURE DIVISION.
        MAIN-PROCEDURE.
 
             DISPLAY "Ingrese un nunero".
-            ACCEPT num.
+            ACCEPT NUM.
 
-            if num > 0
+            if NUM > 0
                 DISPLAY "El numero ingresado el mayor a 0"
                 ELSE
-                    if num < 0
+                    if NUM < 0
                              DISPLAY "El numero ingresado es menor a 0"
                        ELSE
                            DISPLAY "EL numero es 0"

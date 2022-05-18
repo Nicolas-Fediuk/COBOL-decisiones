@@ -10,26 +10,26 @@
        DATA DIVISION.
        FILE SECTION.
        WORKING-STORAGE SECTION.
-       01  num1 pic s9(3).
-       01  num2 pic s9(3).
-       01  resta pic s9(3).
-       01  resta2 pic s9(3).
+       01  NUM1 pic s9(3).
+       01  NUM2 pic s9(3).
+       01  RESTA pic s9(3).
+       01  MULTIPLICACION PIC S9(3).
 
        PROCEDURE DIVISION.
        MAIN-PROCEDURE.
 
             DISPLAY "Ingrese el primer numero".
-            ACCEPT num1.
+            ACCEPT NUM1.
             DISPLAY "Ingrese el segundo numero".
-            ACCEPT num2.
+            ACCEPT NUM2.
 
-            SUBTRACT num1 from num2 GIVING resta.
+            COMPUTE RESTA = NUM1 - NUM2.
 
             if resta < 0
-                MULTIPLY resta by -1 GIVING resta2
-                DISPLAY "valor absoluto: "resta2
+                COMPUTE MULTIPLICACION = RESTA * (-1)
+                DISPLAY "valor absoluto: "MULTIPLICACION
             ELSE
-                DISPLAY "valor absoluto: "resta
+                DISPLAY "valor absoluto: "RESTA
             end-if.
 
             STOP RUN.
